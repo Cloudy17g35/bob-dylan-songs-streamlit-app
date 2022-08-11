@@ -3,6 +3,7 @@ text descrpitons,
 pictures for the application"""
 
 from enum import Enum
+from pathlib import Path
 
 
 class TextDescription(Enum):
@@ -10,7 +11,7 @@ class TextDescription(Enum):
     HEADER = "<h1 style='text-align: center;" \
              "color: blue;'>BOB DYLAN SONGS APP</h1>"
 
-    IMAGE = "picture.png"
+    IMAGE = "images/bob_dylan_photo_wordcloud.png"
 
     DESCRIPTION = """
     <b>DESCRIPTION</b> \
@@ -47,7 +48,6 @@ class TextDescription(Enum):
     I decided to make dataset and play with them on this app as well. \
     with them on this app as well. """
 
-    PICTURE = "picture.png"
 
     DATASET = "<h2 style='text-align: center;" \
               "color: blue;'>DATASET</h2>"
@@ -68,3 +68,5 @@ class TextDescription(Enum):
                            "wordcloud will be generated automatically"
     
     DOWLOAD_WORDCLOUD = "DOWNLOAD YOUR WORDCLOUD"
+    
+    WORDCLOUD_FILENAME = "wordcloud.png"
