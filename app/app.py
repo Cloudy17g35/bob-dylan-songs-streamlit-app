@@ -10,6 +10,7 @@ from wordcloud import WordCloud
 PUBLIC_KEY = 's3://bob-dylan-songs/dylan_songs.parquet'
 WORDCLOUD_FILENAME = 'wordcloud.png'
 
+
 def header_and_description():
     st.write(
         TextDescription.HEADER.value, 
@@ -53,6 +54,7 @@ def save_dataframe_to_csv(
         encoding=encoding
         )
     
+    
 
 def album_selection(data_frame: pd.DataFrame):
     st.write(
@@ -62,7 +64,11 @@ def album_selection(data_frame: pd.DataFrame):
     options: List[str] = get_options(data_frame)
     option = st.selectbox("Album name:", options)
     if option != "select":
-        st.write(f"selected option is {option}")
+        selected_option:str = f"selected album: {option}"
+        st.write(
+            selected_option,
+            unsafe_allow_html=True
+        )
         selected_df = data_frame[data_frame["album"] == option]
         st.dataframe(selected_df)
         csv_data:str = save_dataframe_to_csv(selected_df)
