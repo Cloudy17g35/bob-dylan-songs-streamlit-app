@@ -2,5 +2,5 @@ awswrangler==2.16.1
 nltk==3.7
 pandas==1.4.2
 plotly==5.8.2
-streamlit==1.10.0
+streamlit==1.11.1
 wordcloud==1.8.1
