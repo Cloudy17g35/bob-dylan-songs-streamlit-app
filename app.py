@@ -7,7 +7,7 @@ from app import data_visualizations
 from typing import List
 from collections import Counter
 from wordcloud import WordCloud
-PUBLIC_KEY = 's3://bob-dylan-songs/dylan_songs.parquet'
+PUBLIC_KEY = 'https://bob-dylan-songs.s3.amazonaws.com/dylan_songs.parquet'
 WORDCLOUD_FILENAME = 'wordcloud.png'
 
 

@@ -12,4 +12,6 @@ COPY . .
 
 RUN chmod +x run.sh
 
-CMD ["./run.sh"]
+EXPOSE 8501
+
+CMD ["streamlit", "run", "app.py"]
