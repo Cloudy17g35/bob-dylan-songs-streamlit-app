@@ -21,7 +21,7 @@ app will run on: `http://localhost:8501`
 ![dylan_photo](https://user-images.githubusercontent.com/79964602/143622041-2b683186-762a-4cd4-a437-38ccc59292c9.jpeg)
 
 
-## Functionality:
+## FUNCTIONALITY:
 
 * **Bar chart** with songs distribution per year
 
@@ -29,7 +29,7 @@ app will run on: `http://localhost:8501`
 
 * Make **wordcloud** with songs from particular year
 
-# IDEAS
+## IDEAS
 
 * Improve strings tokenization
 * Add functionality - make filering in **wordcloud** not only for sinlge year but also for range of years.
