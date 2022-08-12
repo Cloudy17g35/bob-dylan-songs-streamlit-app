@@ -11,6 +11,10 @@ docker build -t bob-dylan-songs-app .
 docker run -p 8501:8501 bob-dylan-songs-app
 ```
 
+
+app will run on: `http://localhost:8501`
+
+
 ## DESCRIPTION
 ![download](https://user-images.githubusercontent.com/79964602/143621997-542bfdba-1add-4fb8-bcd6-bd69e0fa5903.png)
 
