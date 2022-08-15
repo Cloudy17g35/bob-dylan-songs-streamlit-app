@@ -25,8 +25,8 @@ def wordcloud(data_frame=pd.DataFrame):
 if __name__ == '__main__':
     header_and_description.show()
     df:pd.DataFrame = s3.S3Handler.read_from_s3(settings.PUBLIC_KEY)
-    dataframe.show(df)
     st.write(text_descriptions.DATASET, unsafe_allow_html=True)
+    dataframe.show(df)
     charts.barchart(df)
     albums:List[str] = dataframe.get_albums(df)
     selected_album:str = user_input.album_selection(albums)
