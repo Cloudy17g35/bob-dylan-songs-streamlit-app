@@ -30,17 +30,18 @@ if __name__ == '__main__':
     charts.barchart(df)
     albums:List[str] = dataframe.get_albums(df)
     selected_album:str = user_input.album_selection(albums)
-    df_filtered_by_album:pd.DataFrame  = dataframe.filter_by_album(df, selected_album)
-    dataframe.show(df_filtered_by_album)
-    csv_data:str = dataframe.to_csv(df)
-    file_name_for_download:str = dataframe.get_csv_filename_for_selected_album(selected_album)
-    button_label:str = text_descriptions.DOWNLOAD_DATAFRAME
-    st.download_button(
-            label=button_label,
-            data=csv_data,
-            file_name=file_name_for_download,
-            mime="text/csv",
-        )
+    if selected_album != 'select':
+        df_filtered_by_album:pd.DataFrame  = dataframe.filter_by_album(df, selected_album)
+        dataframe.show(df_filtered_by_album)
+        csv_data:str = dataframe.to_csv(df)
+        file_name_for_download:str = dataframe.get_csv_filename_for_selected_album(selected_album)
+        button_label:str = text_descriptions.DOWNLOAD_DATAFRAME
+        st.download_button(
+                label=button_label,
+                data=csv_data,
+                file_name=file_name_for_download,
+                mime="text/csv",
+            )
     st.write(
         text_descriptions.WORDCLOUD_SUBHEADER, 
         unsafe_allow_html=True
