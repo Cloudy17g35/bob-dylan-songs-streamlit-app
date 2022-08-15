@@ -24,7 +24,7 @@ def plotly_bar_chart(data_frame: pd.DataFrame):
     return fig
 
 
-def make_wordcloud(frequency: Counter):
+def wordcloud(frequency: Counter):
 
     wc: WordCloud = WordCloud(
         min_font_size=10,

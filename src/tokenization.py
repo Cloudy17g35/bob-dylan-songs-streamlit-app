@@ -1,8 +1,6 @@
 import pandas as pd
 from collections import Counter
-import nltk.corpus
 
-nltk.download("stopwords")
 from nltk.corpus import stopwords as STOPWORDS
 from typing import List
 
