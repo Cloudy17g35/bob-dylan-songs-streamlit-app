@@ -14,14 +14,6 @@ from utils import user_input
 from utils import wordclouds
 
 
-def wordcloud(data_frame=pd.DataFrame):
-    tp = tokenization.TextPreprocessing()
-    lyrics: list = tp.clean_lyrics(df_for_one_year)
-    lyrics_counter: Counter = tp.get_counter(lyrics)
-    # wordcloud is saved as image in the background
-    
-
-
 if __name__ == '__main__':
     header_and_description.show()
     df:pd.DataFrame = s3.S3Handler.read_from_s3(settings.PUBLIC_KEY)
