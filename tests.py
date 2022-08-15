@@ -1,4 +1,4 @@
-from app import s3
+from src import s3
 import pandas as pd
 PUBLIC_KEY = 'https://bob-dylan-songs.s3.amazonaws.com/dylan_songs.parquet'
 
