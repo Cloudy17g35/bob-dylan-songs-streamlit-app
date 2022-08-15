@@ -1,7 +1,15 @@
 import streamlit as st
 import pandas as pd
-from models import text_descriptions
 from typing import List
+
+
+@st.cache
+def read_from_s3(s3_url:str) -> pd.DataFrame:
+        """
+        uses s3 url for instance:
+        s3://bob-dylan-songs/dylan_songs.parquet
+        """
+        return pd.read_parquet(s3_url)
 
 
 def show(data_frame:pd.DataFrame) -> None:
